@@ -9,6 +9,9 @@ import com.app.service.CategoryService;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/api/categories")
@@ -63,4 +66,10 @@ public class CategoryController {
 
 		return category;
 	}
+	
+	@GetMapping("hello")
+	public String getMethodName(@RequestParam String param) {
+		return new String();
+	}
+	
 }
